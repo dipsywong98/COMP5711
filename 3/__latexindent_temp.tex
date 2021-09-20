@@ -1,0 +1,56 @@
+\documentclass[12pt]{article}
+  \usepackage[left=2cm, right=2cm, top=2cm, bottom=2cm]{geometry}
+  \usepackage{amsmath}
+  \usepackage{amssymb}
+  \usepackage{enumitem}
+  \usepackage{fancyhdr}
+  \usepackage{sectsty}
+  \usepackage{amsmath}
+  \usepackage{bm}
+
+  \pagestyle{fancy}
+
+  \sectionfont{\fontsize{15}{18}\selectfont}
+  \subsectionfont{\fontsize{12}{15}\selectfont}
+  
+  \lhead{WONG Yuk Chun (20419764)}
+  \chead{MATH4335 Ass2}
+  \rhead{ycwongal@connect.ust.hk}
+
+  
+  \begin{document}
+  
+  \title{MATH4335 Assignment 2}
+  \section*{Question 1}
+  By Considering the stock price and the formula, we have
+  $$
+  \begin{cases}
+    a+2b = 6\\
+    a+b=4\\
+    3a+2b=5
+  \end{cases}
+  \rightarrow
+  \begin{cases}
+    0.5a+b = 3\\
+    a+b=4\\
+    1.5a+b=2.5
+  \end{cases}
+  $$
+  Then we can approximate $a,b$ by a linear equation system such that $Ax\approx y$, where
+  $$
+  A = \begin{bmatrix}
+    0.5&1\\1&1\\1.5&1
+  \end{bmatrix}, \bm{x} = \begin{bmatrix}a\\b\end{bmatrix}, \bm{y} = \begin{bmatrix} 3\\4\\2.5 \end{bmatrix}
+  $$
+  Emtimate the system using least square approach, we have
+  $$
+  \begin{aligned}
+    A^TA\bm{x} &= A^T\bm{y}\\
+  \bm{x} &= (A^TA)^{-1}A^T\bm{y} = 
+\begin{bmatrix}
+-0.5\\
+\frac{11}{3}
+\end{bmatrix}
+  \end{aligned}
+  $$
+\end{document}
